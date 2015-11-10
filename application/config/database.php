@@ -5,14 +5,14 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['hostname'] = '';
 	$db['default']['username'] = '';
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
 }
 else
 {
-	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['hostname'] = '';
 	$db['default']['username'] = '';
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
