@@ -5,17 +5,17 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'root';
+	$db['default']['hostname'] = '';
+	$db['default']['username'] = '';
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
 }
 else
 {
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'root';
-	$db['default']['password'] = 'root';
-	$db['default']['database'] = 'discussionboard';
+	$db['default']['hostname'] = '';
+	$db['default']['username'] = '';
+	$db['default']['password'] = '';
+	$db['default']['database'] = '';
 }
 
 $db['default']['dbdriver'] = 'mysql';
