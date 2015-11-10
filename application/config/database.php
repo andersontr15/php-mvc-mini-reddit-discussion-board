@@ -17,8 +17,8 @@ else
 	$db['default']['password'] = '';
 	$db['default']['database'] = 'discussionboard';
 }
-
-$db['default']['dbdriver'] = 'pdo';
+$db['default']['server'] =  'ahmxn6q9c3.database.windows.net,1433';
+$db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
