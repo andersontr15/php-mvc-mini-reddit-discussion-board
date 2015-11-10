@@ -5,20 +5,20 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
+	$db['default']['hostname'] = 'tcp:ahmxn6q9c3.database.windows.net,1433';
 	$db['default']['username'] = '';
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
 }
 else
 {
-	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
+	$db['default']['hostname'] = 'tcp:ahmxn6q9c3.database.windows.net,1433';
 	$db['default']['username'] = '';
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
 }
 
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbdriver'] = 'sqlsrv';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
