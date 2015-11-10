@@ -5,9 +5,9 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = '';
-	$db['default']['username'] = '';
-	$db['default']['password'] = '';
+	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['username'] = 'b98de423f68884';
+	$db['default']['password'] = '016a22d4';
 	$db['default']['database'] = 'discussionboard';
 }
 else
