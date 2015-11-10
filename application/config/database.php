@@ -18,7 +18,7 @@ else
 	$db['default']['database'] = '';
 }
 
-$db['default']['dbdriver'] = 'sqlsrv';
+$db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
