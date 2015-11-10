@@ -8,7 +8,7 @@ if(ENVIRONMENT == 'production')
 	$db['default']['hostname'] = '';
 	$db['default']['username'] = '';
 	$db['default']['password'] = '';
-	$db['default']['database'] = '';
+	$db['default']['database'] = 'discussionboard';
 }
 else
 {
