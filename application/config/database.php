@@ -17,7 +17,7 @@ else
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
 }
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbdriver'] = 'pdo';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
