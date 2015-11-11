@@ -5,7 +5,7 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
 	$db['default']['username'] = '';
 	$db['default']['password'] = '';
 	$db['default']['database'] = '';
