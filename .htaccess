@@ -1,6 +1,10 @@
-DirectoryIndex index.php
+<IfModule rewrite_module>
 RewriteEngine on
-RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ ./index.php/$1 [L,QSA]  
+RewriteBase /
+
+# Removes the "/" at the end
+RewriteRule (.+)/$ /$1 [L,R]
+
+RewriteCond $1 !^(index\.php|dhtml|img|css|js|favicon\.ico|robots\.txt)
+RewriteRule ^([^?&]+) /index.php/$1 [L]
+</IfModule>
