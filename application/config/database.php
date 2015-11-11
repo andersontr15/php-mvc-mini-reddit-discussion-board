@@ -5,14 +5,14 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = 'ahmxn6q9c3.discussionboard.windows.net,1433';
+	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
 	$db['default']['username'] = 'theo';
 	$db['default']['password'] = 'Anderson1993!';
 	$db['default']['database'] = 'discussionboard';
 }
 else
 {
-	$db['default']['hostname'] = 'ahmxn6q9c3.discussionboard.windows.net,1433';
+	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
 	$db['default']['username'] = 'theo';
 	$db['default']['password'] = 'Anderson1993!';
 	$db['default']['database'] = 'discussionboard';
