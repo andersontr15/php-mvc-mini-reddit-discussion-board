@@ -15,7 +15,7 @@ else
 	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
 	$db['default']['username'] = 'theo';
 	$db['default']['password'] = 'Anderson1993!';
-	$db['default']['database'] = 'discussionboard';
+	$db['default']['database'] = '';
 }
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
