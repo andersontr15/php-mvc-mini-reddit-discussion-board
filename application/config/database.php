@@ -12,9 +12,9 @@ if(ENVIRONMENT == 'production')
 }
 else
 {
-	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
-	$db['default']['username'] = '';
-	$db['default']['password'] = '';
+	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
+	$db['default']['username'] = 'theo';
+	$db['default']['password'] = 'Anderson1993!';
 	$db['default']['database'] = '';
 }
 $db['default']['dbdriver'] = 'sqlsrv';
