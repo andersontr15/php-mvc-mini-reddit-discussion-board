@@ -17,7 +17,7 @@ else
 	$db['default']['password'] = 'Anderson1993!';
 	$db['default']['database'] = 'discussionboard';
 }
-$db['default']['dbdriver'] = 'sqlsrv';
+$db['default']['dbdriver'] = 'pdo';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
