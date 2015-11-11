@@ -4,7 +4,7 @@ $config['base_url']	= '';
 
 $config['index_page'] = '';
 
-$config['uri_protocol']	= 'AUTO';
+$config['uri_protocol']	= 'REQUEST_URI';
 
 $config['url_suffix'] = '';
 
