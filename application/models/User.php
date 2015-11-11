@@ -4,8 +4,8 @@ class User extends CI_Model {
 
 	 public function register($post)
   	{	
-    	$query = "INSERT INTO users (first_name, last_name, email, password, 
-             created_at, updated_at)
+    	$query = "INSERT INTO discussionboard.users (discussionboard.users.first_name, discussionboard.users.last_name, discussionboard.users.email, discussionboard.users.password, 
+             discussionboard.users.created_at, discussionboard.users.updated_at)
               VALUES (?, ?, ?, ?, NOW(), NOW())";
     	$values = array($post['first_name'], $post['last_name'], 
               strtolower($post['email']), $post['password']);
@@ -14,7 +14,7 @@ class User extends CI_Model {
 
     public function insert_new($post)
     {
-      $query = "INSERT into users(first_name, last_name, email, password, created_at, updated_at)
+      $query = "INSERT into discussionboard.users(discussionboard.users.first_name, discussionboard.users.last_name, discussionboard.users.email, discussionboard.users.password, discussionboard.users.created_at, discussionboard.users.updated_at)
       VALUES(?,?,?,?,NOW(),NOW())";
       $values = array($post['first_name'], $post['last_name'], strtolower($post['email']), $post['password']);
       return $this->db->query($query, $values);
@@ -24,7 +24,7 @@ class User extends CI_Model {
   	public function login($post)
   	{
 
-    $query = "SELECT * FROM discussionboard.discusionboard.users WHERE email = ? AND password = ?";
+    $query = "SELECT * FROM discussionboard.users WHERE discussionboard.users.email = ? AND discussionboard.users.password = ?";
 
     $values = array(strtolower($post['email']), $post['password']);
 
@@ -35,7 +35,7 @@ class User extends CI_Model {
   	public function get_all_users()
   	{
   	$sessioned_user = $this->session->userdata('logged_user');
-    $query = "SELECT users.id as id, first_name, last_name, email, created_at 
+    $query = "SELECT disccusionboard.users.id as id, discussionboard.users.first_name, discussionboard.users.last_name, discussionboard.users.email, discussionboard.users.created_at 
               FROM users WHERE id != $sessioned_user";
 
     return $this->db->query($query)->result_array();
