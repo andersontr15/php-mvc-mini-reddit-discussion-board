@@ -1,7 +1,5 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond $1 !^(index\.php|images|stylesheets|scripts|robots\.txt)
-    RewriteRule ^(.*)$ /index.php/$1 [L]
     RewriteBase /
 
     #Removes access to the system folder by users.
