@@ -10,7 +10,7 @@ class Users extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('new');
+		$this->load->view('home');
 	}
 
 	public function new_user()
