@@ -2,9 +2,9 @@
 
 $config['base_url']	= '';
 
-$config['index_page'] = '';
+$config['index_page'] = 'index';
 
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']	= 'AUTO';
 
 $config['url_suffix'] = '';
 
