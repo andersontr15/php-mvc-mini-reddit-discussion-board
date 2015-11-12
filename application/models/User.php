@@ -24,7 +24,7 @@ class User extends CI_Model {
   	public function login($post)
   	{
 
-    $query = "SELECT * FROM discussionboard.users WHERE users.email = ? AND users.password = ?";
+    $query = "SELECT * FROM users WHERE users.email = ? AND users.password = ?";
 
     $values = array(strtolower($post['email']), $post['password']);
 
