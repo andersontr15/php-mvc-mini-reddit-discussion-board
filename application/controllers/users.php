@@ -23,7 +23,7 @@ class Users extends CI_Controller {
 		$this->load->model("User");
 		$user = $this->input->post();
 		$this->User->insert_new($user);
-		return redirect('/dashboards/dashboard');
+		return redirect('/dashboard');
 	}
 
 	public function signin(){
