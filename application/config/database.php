@@ -17,7 +17,7 @@ else
 	$db['default']['password'] = '3b0ae80a';
 	$db['default']['database'] = 'ahmxn6q9c3.database.windows.net,1433';
 }
-$db['default']['dbdriver'] = 'mysqli';
+$db['default']['dbdriver'] = 'sqlsrv';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
