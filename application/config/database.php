@@ -6,15 +6,15 @@ $active_record = TRUE;
 if(ENVIRONMENT == 'production')
 {
 	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
-	$db['default']['username'] = 'theo';
-	$db['default']['password'] = 'Anderson1993!';
+	$db['default']['username'] = 'b364db00387735';
+	$db['default']['password'] = '3b0ae80a';
 	$db['default']['database'] = 'ahmxn6q9c3.database.windows.net,1433';
 }
 else
 {
 	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
-	$db['default']['username'] = 'theo';
-	$db['default']['password'] = 'Anderson1993!';
+	$db['default']['username'] = 'b364db00387735';
+	$db['default']['password'] = '3b0ae80a';
 	$db['default']['database'] = 'ahmxn6q9c3.database.windows.net,1433';
 }
 $db['default']['dbdriver'] = 'sqlsrv';
