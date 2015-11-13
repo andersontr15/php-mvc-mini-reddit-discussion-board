@@ -1,7 +1,8 @@
 <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteBase /
-
+        RewriteCond %{QUERY_STRING} ^([\w\-]+)$
+        RewriteRule ^postname/$ postname/%1?   [L]
         # Removes index.php from ExpressionEngine URLs
         RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
         RewriteCond %{REQUEST_URI} !/system/.* [NC]
@@ -11,23 +12,5 @@
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteRule ^(.*)$ /index.php/$1 [L]
-        Options +FollowSymLinks -MultiViews
-# Turn mod_rewrite on
-RewriteEngine On
-RewriteBase /
 
-RewriteCond %{THE_REQUEST} /product(?:\.php)?\?name=([^\s&]+) [NC]
-RewriteRule ^ product=%1? [R=302,L,NE]
-
-## hide .php extension
-# To externally redirect /dir/foo.php to /dir/foo
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
-RewriteRule ^ %1 [R,L,NC]
-
-# internal forward from pretty URL to actual one
-RewriteRule ^product=(.+)$ product?name=$1 [L,QSA,NC]
-
-## To internally redirect /dir/foo to /dir/foo.php
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^ %{REQUEST_URI}.php [L]
 </IfModule>
