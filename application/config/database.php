@@ -8,14 +8,14 @@ if(ENVIRONMENT == 'production')
 	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
 	$db['default']['username'] = 'b364db00387735';
 	$db['default']['password'] = '3b0ae80a';
-	$db['default']['database'] = 'ahmxn6q9c3.database.windows.net,1433';
+	$db['default']['database'] = 'discussionboard';
 }
 else
 {
 	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
 	$db['default']['username'] = 'b364db00387735';
 	$db['default']['password'] = '3b0ae80a';
-	$db['default']['database'] = 'ahmxn6q9c3.database.windows.net,1433';
+	$db['default']['database'] = 'discussionboard';
 }
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
