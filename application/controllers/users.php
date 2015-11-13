@@ -74,7 +74,7 @@ class Users extends CI_Controller {
 			if($user)
 			{
 				$this->session->set_userdata('logged_user', $user['id']);
-				redirect('/dashboards/dashboard');
+				redirect('/dashboard');
 			}
 			else
 			{
@@ -110,7 +110,7 @@ class Users extends CI_Controller {
 	{
 		$this->load->model("User");
 		$user = $this->User->delete_user($id);
-		redirect('/dashboards/dashboard');
+		redirect('/dashboard');
 	}
 
 	public function edit_user($id)
@@ -125,7 +125,7 @@ class Users extends CI_Controller {
 		$this->load->model("User");
 		$post = $this->input->post();
 		$this->User->update($post);
-		redirect('/dashboards/dashboard');
+		redirect('/dashboard');
 	}
 
 	public function logoff()
