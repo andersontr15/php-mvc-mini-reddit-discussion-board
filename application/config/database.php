@@ -5,17 +5,17 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
-	$db['default']['username'] = 'theo';
-	$db['default']['password'] = 'Anderson1993!';
-	$db['default']['database'] = 'discussionboard';
+	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['username'] = '';
+	$db['default']['password'] = '';
+	$db['default']['database'] = '';
 }
 else
 {
-	$db['default']['hostname'] = 'ahmxn6q9c3.database.windows.net,1433';
-	$db['default']['username'] = 'theo';
-	$db['default']['password'] = 'Anderson1993!';
-	$db['default']['database'] = 'discussionboard';
+	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['username'] = '';
+	$db['default']['password'] = '';
+	$db['default']['database'] = '';
 }
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
