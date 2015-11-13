@@ -4,39 +4,55 @@ class User extends CI_Model {
 
 	 public function register($post)
   	{	
-    	$query = "INSERT INTO discussionboard.users (discussionboard.users.first_name, discussionboard.users.last_name, discussionboard.users.email, discussionboard.users.password, 
-             discussionboard.users.created_at, discussionboard.users.updated_at)
-              VALUES (?, ?, ?, ?, NOW(), NOW())";
-    	$values = array($post['first_name'], $post['last_name'], 
-              strtolower($post['email']), $post['password']);
+    	$query = "INSERT INTO discussionboard.users 
+      (discussionboard.users.first_name, 
+      discussionboard.users.last_name, 
+      discussionboard.users.email, 
+      discussionboard.users.password, 
+      discussionboard.users.created_at, 
+      discussionboard.users.updated_at)
+       VALUES (?, ?, ?, ?, NOW(), NOW())";
+    	$values = array($post['first_name'], 
+      $post['last_name'], 
+      strtolower($post['email']), 
+      $post['password']);
     	return $this->db->query($query, $values);
   	}
 
     public function insert_new($post)
     {
-      $query = "INSERT into discussionboard.users(discussionboard.users.first_name, discussionboard.users.last_name, discussionboard.users.email, discussionboard.users.password, discussionboard.users.created_at, discussionboard.users.updated_at)
+      $query = "INSERT into discussionboard.users
+      (discussionboard.users.first_name, 
+      discussionboard.users.last_name, 
+      discussionboard.users.email, 
+      discussionboard.users.password, 
+      discussionboard.users.created_at, 
+      discussionboard.users.updated_at)
       VALUES(?,?,?,?,NOW(),NOW())";
-      $values = array($post['first_name'], $post['last_name'], strtolower($post['email']), $post['password']);
+      $values = array($post['first_name'], $post['last_name'], 
+      strtolower($post['email']), $post['password']);
       return $this->db->query($query, $values);
     }
 
 
   	public function login($post)
   	{
-
-    $query = "SELECT * FROM users WHERE users.email = ? AND users.password = ?";
-
-    $values = array(strtolower($post['email']), $post['password']);
-
-    return $this->db->query($query, $values)->row_array();
+      $query = "SELECT * FROM users WHERE users.email = ? 
+      AND users.password = ?";
+      $values = array(strtolower($post['email']), $post['password']);
+      return $this->db->query($query, $values)->row_array();
 
   	}
 
   	public function get_all_users()
   	{
-  	$sessioned_user = $this->session->userdata('logged_user');
-    $query = "SELECT disccusionboard.users.id as id, discussionboard.users.first_name, discussionboard.users.last_name, discussionboard.users.email, discussionboard.users.created_at 
-              FROM users WHERE id != $sessioned_user";
+    	$sessioned_user = $this->session->userdata('logged_user');
+      $query = "SELECT disccusionboard.users.id as id, 
+      discussionboard.users.first_name, 
+      discussionboard.users.last_name, 
+      discussionboard.users.email, 
+      discussionboard.users.created_at 
+      FROM users WHERE id != $sessioned_user";
 
     return $this->db->query($query)->result_array();
   	}
@@ -48,36 +64,37 @@ class User extends CI_Model {
 
   	public function get_user_by_id($id)
   	{
-    $query = "SELECT users.id as id, users.password, 
-    pokes.user_id, pokes.poked_id, 
-    pokes.created_at,pokes.updated_at,
-    count(topics.counter) as topic_counter, 
-    count(posts.counter) as post_counter, 
-    count(comments.counter) as comment_counter, 
-    count(pokes.counter) as poke_counter,
-    topics.id, topics.user_id, first_name, 
-    last_name, email, users.created_at
-    FROM users 
-    LEFT JOIN topics ON users.id = topics.user_id 
-    LEFT JOIN posts ON users.id = posts.user_id
-    LEFT JOIN pokes ON users.id = pokes.user_id
-    LEFT JOIN comments ON users.id = comments.user_id
-    WHERE users.id = ?";
-    return $this->db->query($query, $id)->row_array();
+      $query = "SELECT users.id as id, users.password, 
+      pokes.user_id, pokes.poked_id, 
+      pokes.created_at,pokes.updated_at,
+      count(topics.counter) as topic_counter, 
+      count(posts.counter) as post_counter, 
+      count(comments.counter) as comment_counter, 
+      count(pokes.counter) as poke_counter,
+      topics.id, topics.user_id, first_name, 
+      last_name, email, users.created_at
+      FROM users 
+      LEFT JOIN topics ON users.id = topics.user_id 
+      LEFT JOIN posts ON users.id = posts.user_id
+      LEFT JOIN pokes ON users.id = pokes.user_id
+      LEFT JOIN comments ON users.id = comments.user_id
+      WHERE users.id = ?";
+      return $this->db->query($query, $id)->row_array();
   	}
 
 
     public function update($user)
     {
-    $query = "UPDATE users 
-              SET email=?, first_name=?, last_name=?, password=?
-              WHERE users.email=?";
-    $values = array($user['email'],
-                    $user['first_name'], 
-                    $user['last_name'], 
-                    $user['password'],
-                    $user['email']);
-    return $this->db->query($query, $values);
+      $query = "UPDATE users 
+                SET email=?, first_name=?, 
+                last_name=?, password=?
+                WHERE users.email=?";
+      $values = array($user['email'],
+                      $user['first_name'], 
+                      $user['last_name'], 
+                      $user['password'],
+                      $user['email']);
+      return $this->db->query($query, $values);
     }
 
 }
